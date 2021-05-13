@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	  <style type="text/css" media="screen">
+				  @import '../css/cssInformacion.css';
+	  </style>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+	  <script src="../js/popper.min.js"></script>
+    <script defer src="../js/botonScroll.js"></script>
+    <script defer src="../js/jquery-3.4.1.min.js"></script>
+    <script defer src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/carrito.js"></script>
+    <script defer src="../js/pedido.js"></script>
+  </head>
+  <body>
+    <div class="grid-container1">
+      <div class="itemIdioma">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light border">
+          <a class="navbar-brand text-dark" href="../index.html">LIBRERÍA ALMERÍA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <img src="../img/iconocarrito.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                  width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" style="float: left;"></img>
+                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+    
+                  <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                  <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                    Compra</a>
+                </div>
+              </li>
+              </ul>
+              <a id="baderaespana" href="#"><img src="../img/banderaespana.png" width="40px" style=" float: right;"></a>
+              <a id="banderaenglaterra" href="#"><img src="../img/banderaenglaterra.png" width="40px" style="float: right;"></a>
+              <a id="iconocuenta" href="#"><img src="../img/iconocuenta.png" width="25px" style="float: right;"></a>  
+          </div>
+        </nav>
+      </div>
+			<div class="itemCabecera"> 
+          <center>
+            <img src="../img/logoLibreria.svg" width="20%">
+            <form>
+              <div>
+                  <br>
+                  <input placeholder="Título, autor, ISBN..." class="form-control form-text" type="text" size="60" maxlength="300" />
+                  <span>
+                      <button type="submit">Buscar</button>
+                  </span>
+              </div>
+            </form>  
+          </center>
+      </div>
+      <div class="itemImagen">
+          <h1>Nuestra librería</h1><br><br><br>
+          <div class="flex-container">
+        			<img src="../img/libreria.jpg" style="width: 100%">
+          </div>
+      </div>
+      <div class="itemDescripcion">
+          <h1>Conócenos</h1><br><br><br>
+          <div class="flex-container">
+              <div class="flex-item-left">
+                  <p id="movimiento">Nuestra librería es una de más destacables de la provincia de Almería, por lo que hemos recibido el premio a la mejor librería de la provincia en el 2019.</p>
+                  <p id="movimiento">Queremos que los más pequeños comiencen a leer en edad tempranas para que no se pierdan en el mundo tecnológico en el que les ha tocado nacer. Para ello, tenemos distintos programas en los que padres, madres e hijos/as acuden a nuestra librería el tercer sábado de cada mes para leer en familia los cuentos más enigmáticos.</p>
+                  <p id="movimiento">Además, estamos comprometidos en apoyar a los escritores y escritoras de nuestra provincia, por lo que siempre tenemos a disposición de los lectores una sección especial para ellos en nuestra librería. También, tenemos un programa especial que trabajamos conjuntamente con editoriales almerienses para ayudar a nuestros escritores locales a publicar sus fantásticos libros.</p>
+                  <p id="movimiento">Si quieres conocernos un poco más, no dudes en pasarte por nuestra librería. ¡Estaremos encantados/as de atenderte!</p>
+              </div>
+          </div>
+      </div>
+      <div class="itemDestacado">
+  			<div class="flex-container">
+  				<div class="flex-item-left">
+  					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.6763629794796!2d-2.4672780852303213!3d36.8502262799382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7075f97dc53a93%3A0x417a97f6891adfa4!2sFinca%20Santa%20Isabel%2C%20Paseo%20de%20la%20Caridad%2C%20s%2Fn%2C%2004008%20Almer%C3%ADa!5e0!3m2!1ses!2ses!4v1612115727099!5m2!1ses!2ses" width="500" height="315" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  				</div>
+  				<div class="flex-item-right">
+  					<iframe width="100%" height="315" src="https://www.youtube.com/embed/VnWTOXInBmw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  				</div>
+  			</div>
+      </div>
+	  </div>
+    <div class="" id="lista-productos"></div>
+      <div class="itemFooter">
+			<div class="flex-container2">
+				<div class="flex-item-left2">
+					<h3>Contacto</h3>
+					<p>950 52 51 53</p>
+					<p>email@gmail.com</p>
+				</div>
+				<div class="flex-item-right2">
+					<h3>Localización</h3>
+					<p>C/ Nueva Almería 22</p>
+					<p>04007</p>
+				</div>
+			</div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>

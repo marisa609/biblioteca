@@ -1,0 +1,195 @@
+	    .itemIdioma { grid-area: header; }
+		.itemCabecera { grid-area: cabecera; }
+	    .itemImagen { grid-area: hero; }
+	    .itemDestacado { grid-area: main; }
+	    .itemDescripcion { grid-area: heroDos; }
+	    .itemFooter { grid-area: banner; }
+	    
+	    .grid-container1 {
+	      display: grid;
+	      grid-template-areas:
+			'header header header header header header'
+			'cabecera cabecera cabecera cabecera cabecera cabecera'
+	        'hero hero hero hero hero hero'
+	        'heroDos heroDos heroDos heroDos heroDos heroDos'
+	        'main main main main main main'
+	        'banner banner banner banner banner banner';
+	      grid-gap: 0px;
+	      padding: 10px;
+	    }
+	    
+	    .grid-container1 > div {
+	      background-color: rgba(255, 255, 255, 0.8);
+		  width: 97%;
+	      /*text-align: center;*/
+	      padding: 20px 0;
+	      /*font-size: 10px;*/
+	    }
+
+	    div.itemIdioma {
+	      background-color: white;
+	      height: 5px;
+	      color: black;
+	      padding-left: 10px;
+	      padding-right: 10px;
+	      padding-top: 3px;
+	      padding-bottom: 27px;
+	      border-color: #aaaaaa;
+	      border-width: 1px;
+	      border-style: solid;
+	    }
+	    
+		div.itemCabecera {
+		  background-color: #fb7716;
+		  color: white;
+	      width: 70%;
+	      min-height: 250px;
+	      margin-left: 15%;
+	      padding-top: 50px;
+		}
+
+	    #baderaespana {
+	    	margin-left:5px;
+	    }
+
+	    div.itemImagen {
+	      background-color: white;
+	      color: black;
+	      min-height: 500px;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 90px;
+	      padding-bottom: 100px;
+	      text-align: center;
+	    }
+
+	    div.itemDestacado {
+	      background-color: white; /*#b5b0b0*/
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 50px;
+	    } 
+
+	    div.itemDescripcion {
+	      background-color: white;
+	      color: black;
+	      min-height: 500px;
+	      width: 70%;
+	      margin-left: 15%;
+		  text-align: center;
+		  padding-top: 40px;
+	      padding-bottom: 100px;
+	    }
+
+	    div.itemFooter {
+		  background-color: #fb7716;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	    }
+	    /*PseudoClases*/
+	    a:focus { /*Igual que hover pero para que funcione al hacer tabulador*/
+	      text-decoration: underline;
+	      color: #cf4104;
+	    }
+	    a:hover { /*Marca donde tenemos el ratón*/
+	      text-decoration: underline;
+	      color: #cf4104;
+	    } 
+	    a:visited { /*Marca las visitas*/
+	      color: green;
+	    }
+	    a:active { /*Cambia de color al hacer click*/
+	      color: green;
+	    }
+		a {
+		  text-decoration: none; /*Elimino el subrayado de todos los enlaces*/
+		  color: black;
+		}
+
+	    .flex-container {
+	      display: flex;
+	      flex-direction: row;
+	      font-size: 20px;
+	      text-align: center;
+	      min-height: 370px;
+	    }
+
+	    .flex-item-left {
+	      background-color: white;
+	      padding: 10px; 
+	      flex: 50%;
+	    }
+
+	    .flex-item-right {
+	      background-color: white;
+	      padding: 10px;
+	      flex: 50%;
+	    }
+
+	    /* Responsive layout - makes a one column-layout instead of two-column layout */
+	    @media (max-width: 1800px) {
+	      .flex-container {
+	        	flex-direction: column;
+	      }
+	      .flex-container1 {
+				flex-direction: column;
+		  }
+		  .flex-container2 {
+				flex-direction: column;
+		  }
+	    }
+		
+		
+		.flex-container2 {
+			display: flex;
+			flex-direction: row;
+			font-size: 20px;
+			min-height: 150px;
+		}
+
+		.flex-item-left2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		.flex-item-right2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		p {
+			font-size: 1.3em;
+		}
+
+		h1 {
+			text-decoration: underline orange;
+		}
+
+		/*ANIMACIÓN*/
+		@keyframes slidein {
+			from {
+				margin-left: 100%;
+				width: 300%
+			}
+
+			to {
+				margin-left: 0%;
+				width: 100%;
+			}
+		}
+
+		#movimiento {
+			animation-duration: 3s;
+			animation-name: slidein;
+			animation-direction: alternate;
+		}
+
+
+
+		

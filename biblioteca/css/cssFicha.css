@@ -1,0 +1,214 @@
+		.itemIdioma { grid-area: header; }
+		.itemCabecera { grid-area: cabecera; }
+	    .itemLibro { grid-area: libro; }
+	    .itemPestanas { grid-area: pestanas; }
+	    .itemSipnosis { grid-area: sipnosis; }
+	    .itemBlanco { grid-area: blanco; }
+	    .itemBlanco2 { grid-area: blanco2; }
+	    .itemFooter { grid-area: banner; }
+	    
+	    .grid-container1 {
+	      display: grid;
+	      grid-template-areas:
+			'header header header header header '
+			'blanco  cabecera cabecera cabecera blanco2'
+	        'blanco  libro libro libro  blanco2'
+	        'blanco  pestanas pestanas pestanas blanco2'
+	        'blanco  sipnosis sipnosis sipnosis  blanco2'
+	        'blanco banner banner banner  blanco2';
+	      width: 97%;
+	      margin-left: auto; 
+	      margin-right: auto;
+	      grid-gap: 0px;
+	      padding: 10px;
+	    }
+
+	    .grid-container1 > div {
+	      background-color: rgba(255, 255, 255, 0.8);
+	      /*text-align: center;*/
+	      padding: 20px 0;
+	      /*font-size: 10px;*/
+	    }
+
+	    div.itemIdioma {
+	      background-color: white;
+	      height: 5px;
+	      color: black;
+	      padding-left: 10px;
+	      padding-right: 10px;
+	      padding-top: 3px;
+	      padding-bottom: 27px;
+	      border-color: #aaaaaa;
+	      border-width: 1px;
+	      border-style: solid;
+	    }
+
+	    #baderaespana {
+	    	margin-left:5px;
+	    }
+	    
+		div.itemCabecera {
+		  background-color: #fb7716;
+		  color: white;
+	      width: 70%;
+	      min-height: 250px;
+	      margin-left: 15%;
+	      padding-top: 50px;
+		}
+	
+	    div.itemLibro {
+	      background-color: white;
+	      color: black;
+	      min-height: 500px;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 120px;
+	      padding-bottom: 60px;
+	      text-align: center;
+	    }
+
+	    div.itemPestanas {
+	      background-color: #e84033;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	      text-align: center;
+	      font: condensed 120% sans-serif;
+	    }  
+
+		div.itemSipnosis {
+	      background-color: white;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 80px;
+	      padding-bottom: 60px;
+	      line-height: 200%;
+	      font: oblique 120% sans-serif;
+ 	    }
+
+	    div.itemBlanco {
+	    	background-color: white;
+	    }
+
+	    div.itemBlanco2 {
+	    	background-color: white;
+	    }
+
+	    div.itemFooter {
+		  background-color: #fb7716;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	    }
+
+	    /*PseudoClases*/
+	    a:focus { /*Igual que hover pero para que funcione al hacer tabulador*/
+	      text-decoration: underline;
+	      color: #101261;
+	    } 
+	    a:hover { /*Marca donde tenemos el ratón*/
+	      text-decoration: underline;
+	      color: #101261;
+	    } 
+	    a:visited { /*Marca las visitas*/
+	      color: green;
+	    }
+	    a:active { /*Cambia de color al hacer click*/
+	      color: green;
+	    }
+		a {
+		  text-decoration: none; /*Elimino el subrayado de todos los enlaces*/
+		  color: black;
+		}
+
+	    @media (max-width: 1800px) {
+	      .flex-container {
+	        	flex-direction: column;
+	      }
+	      .flex-container1 {
+				flex-direction: column;
+		  }
+		  .flex-container2 {
+				flex-direction: column;
+		  }
+		  .flex-container2 {
+				flex-direction: column;
+		  }
+	    }
+
+	    .flex-container {
+			text-align: left;
+			min-height: 370px;
+			padding-left: 30px;
+	   	    padding-right: 30px;
+		}
+
+		.flex-container1 {
+			display: flex;
+			
+			text-align: center;
+			min-height: 370px;
+		}
+
+		.flex-item-left1 {
+			background-color: white;
+			/*margin-left: 20px;*/
+			padding: 10px;
+			flex: 80%;
+		}
+		.flex-item-right1 {
+			background-color: #e84033;
+			padding: 10px;
+			padding-bottom: 20px;
+			padding-left: 30px;
+			padding-right: 100px;
+			font-size: 20px;
+			text-align: left;
+			flex: 20%;
+		}
+
+	    .flex-container2 {
+			display: flex;
+			flex-direction: row;
+			font-size: 20px;
+			min-height: 150px;
+		}
+
+		.flex-item-left2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		.flex-item-right2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		/*#libro6 {
+    		padding-left: 100px;
+		}*/
+
+		#iconoanadir{
+			padding-left: 100px;
+		}
+
+	    #tituloDestacado{
+			color: #cf4104;
+			font-size: 40px;
+			margin: 6px 0;
+		}
+
+		#titulo{
+			color: black;
+			font-size: 30px;
+		}
+
+		#precio {
+			font-size: 30px;
+			font-weight: bold;
+		}

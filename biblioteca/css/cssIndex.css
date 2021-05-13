@@ -1,0 +1,281 @@
+	    .itemIdioma { grid-area: header; }
+		.itemCabecera { grid-area: cabecera; }
+	    .itemBest { grid-area: hero; }
+	    .itemDestacado { grid-area: main; }
+	    .itemProvincia { grid-area: heroDos; }
+	    .itemFooter { grid-area: banner; }
+	    
+	    .grid-container1 {
+	      display: grid;
+	      grid-template-areas:
+			'header header header header header header'
+			'cabecera cabecera cabecera cabecera cabecera cabecera'
+	        'hero hero hero hero hero hero'
+	        'main main main main main main'
+	        'heroDos heroDos heroDos heroDos heroDos heroDos'
+	        'banner banner banner banner banner banner';
+	      grid-gap: 0px;
+	      padding: 10px;
+	    }
+	    
+	    .grid-container1 > div {
+	      background-color: rgba(255, 255, 255, 0.8);
+		  width: 97%;
+	      /*text-align: center;*/
+	      padding: 20px 0;
+	      /*font-size: 10px;*/
+	    }
+
+	    div.itemIdioma {
+	      background-color: white;
+	      height: 5px;
+	      color: black;
+	      padding-left: 10px;
+	      padding-right: 10px;
+	      padding-top: 3px;
+	      padding-bottom: 27px;
+	      border-color: #aaaaaa;
+	      border-width: 1px;
+	      border-style: solid;
+	    }
+	    
+		div.itemCabecera {
+		  background-color: #fb7716;
+		  color: white;
+	      width: 70%;
+	      min-height: 250px;
+	      margin-left: 15%;
+	      padding-top: 50px;
+		}
+
+	    #baderaespana {
+	    	margin-left:5px;
+	    }
+
+	    div.itemBest {
+	      background-color: white;
+	      color: black;
+	      min-height: 500px;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 80px;
+	      padding-bottom: 100px;
+	      text-align: center;
+	    }
+
+	    div.itemDestacado {
+	      background-color: #b5b0b0;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	      padding-top: 50px;
+	    } 
+
+	    div.itemProvincia {
+	      background-color: white;
+	      color: black;
+	      min-height: 500px;
+	      width: 70%;
+	      margin-left: 15%;
+		  text-align: center;
+		  padding-top: 100px;
+	      padding-bottom: 100px;
+	    }
+
+	    div.itemFooter {
+		  background-color: #fb7716;
+	      color: black;
+	      width: 70%;
+	      margin-left: 15%;
+	    }
+	    /*PseudoClases*/
+	    a:focus { /*Igual que hover pero para que funcione al hacer tabulador*/
+	      text-decoration: underline;
+	      color: #cf4104;
+	    }
+	    a:hover { /*Marca donde tenemos el ratón*/
+	      text-decoration: underline;
+	      color: #cf4104;
+	    } 
+	    /* 
+		Marca las visitas
+		a:visited { 
+	      color: green;
+	    } */
+	    a:active { /*Cambia de color al hacer click*/
+	      color: green;
+	    }
+		a {
+		  text-decoration: none; /*Elimino el subrayado de todos los enlaces*/
+		  color: black;
+		}
+
+	    .flex-container {
+	      display: flex;
+	      flex-direction: row;
+	      font-size: 20px;
+	      text-align: center;
+	      min-height: 370px;
+	    }
+
+	    .flex-item-left {
+	      background-color: white;
+	      padding: 10px; 
+	      flex: 50%;
+	    }
+
+	    .flex-item-right {
+	      background-color: white;
+	      padding: 10px;
+	      flex: 50%;
+	    }
+
+	    /* Responsive layout - makes a one column-layout instead of two-column layout */
+	    @media (max-width: 1800px) {
+	      .flex-container {
+	        flex-direction: column;
+	      }
+	      .flex-container1 {
+				flex-direction: column;
+		  }
+		  .flex-container2 {
+				flex-direction: column;
+		  }
+	    }
+		.flex-container1 {
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+			min-height: 370px;
+		}
+
+		.flex-item-left1 {
+			background-color: white;
+			margin-left: 20px;
+			padding: 10px;
+			flex: 30%;
+		}
+		.flex-item-right1 {
+			background-color: #b5b0b0;
+			padding: 10px;
+			padding-left: 30px;
+			padding-right: 100px;
+			font-size: 20px;
+			text-align: left;
+			flex: 70%;
+		}
+		.flex-container2 {
+			display: flex;
+			flex-direction: row;
+			font-size: 20px;
+			min-height: 150px;
+		}
+
+		.flex-item-left2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		.flex-item-right2 {
+			background-color: #fb7716;
+			padding: 5px;
+			text-align: center;
+			flex: 50%;
+		}
+
+		/*Modificaciones en las letras de título, etc.*/
+		#titulo{
+			color: #cf4104;
+			font-size: 25px;
+			margin: 6px 0;
+		}
+		#tituloDestacado{
+			color: #cf4104;
+			font-size: 40px;
+			margin: 6px 0;
+		}
+		#autor{
+			margin: 6px 0;
+			font-weight: bold;
+		}
+		#editorialEisbn {
+			margin: 8px 0;
+			font-size: 15px;
+		}
+		#editorialEisbnDestacado {
+			color: #cf4104;
+			margin: 8px 0;
+			font-size: 15px;
+		}
+		#precio {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		/*Estrellas*/
+		#form {
+		  width: 250px;
+		  margin: 0 auto;
+		  height: 50px;
+		}
+
+		#form p {
+		  text-align: center;
+		}
+
+		#form label {
+		  font-size: 20px;
+		}
+
+		input[type="radio"] {
+		  display: none;
+		}
+
+		label {
+		  color: grey;
+		  font-size: 30px;
+		}
+
+		.clasificacion {
+		  direction: rtl;
+		  unicode-bidi: bidi-override;
+		}
+
+		label:hover, label:hover ~ label {
+		  color: orange;
+		}
+
+		input[type="radio"]:checked ~ label {
+		  color: orange;
+		}
+
+		/*Boton de ir arriba*/
+
+		#button-up{
+			width: 60px;
+			height: 60px;
+			background: #46a2fd;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			border-radius: 50%;
+			font-size: 20px;
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
+			
+			cursor: pointer; 
+			border: 4px solid transparent;
+			transition: all 300ms ease;
+			transform: scale(0);
+		}
+
+		#button-up:hover{
+			transform: scale(1.1);
+			border-color: rgba(0,0,0,0.1);
+		} 
+
+
