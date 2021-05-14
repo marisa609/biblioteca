@@ -15,7 +15,6 @@ class Carrito {
 
     //Leer datos del producto
     leerDatosProducto(producto){
-        console.log(producto, 'hola');
         const infoProducto = {
             imagen : producto.querySelector('img').src,
             titulo: producto.querySelector('p').textContent,
@@ -69,7 +68,6 @@ class Carrito {
         `;
         listaProductos.appendChild(row);
         this.guardarProductosLocalStorage(producto);
-
     }
 
     //Eliminar el producto del carrito en el DOM
@@ -81,7 +79,7 @@ class Carrito {
                 title: '¿Está seguro?',
                 text: "El producto será eliminado!",
                 icon: 'warning',
-                showCancelButton: true,
+                showCancelButton: true, 
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Si, deseo eliminar!'
@@ -91,18 +89,22 @@ class Carrito {
                         'Eliminado!',
                         'El producto ha sido eliminado',
                         'success'
-                    ) 
+                    )  
                     e.target.parentElement.parentElement.remove();
                     producto = e.target.parentElement.parentElement;
-                    productoID = producto.querySelector('a').getAttribute('data-id');
-                    
+                    productoID = producto.querySelector('a').getAttribute('data-id'); 
+                    this.eliminarProductoLocalStorage(productoID);
+                    this.calcularTotal();
                 }
-               
               })
+        } else if(e.target.classList.contains('borrar-producto2')){
+                    e.target.parentElement.parentElement.remove();
+                    producto = e.target.parentElement.parentElement;
+                    productoID = producto.querySelector('a').getAttribute('data-id'); 
+                    this.eliminarProductoLocalStorage(productoID);      
         }
-        this.eliminarProductoLocalStorage(productoID);
         this.calcularTotal();
-    } 
+    }  
 
     //Elimina todos los productos
     vaciarCarrito(e){
@@ -111,7 +113,6 @@ class Carrito {
             listaProductos.removeChild(listaProductos.firstChild);
         }
         this.vaciarLocalStorage();
-
         return false;
     }
 
@@ -178,7 +179,7 @@ class Carrito {
                 </td>
                 <td id='subtotales'>${producto.precio * producto.cantidad}</td>
                 <td>
-                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
+                    <a href="#" class="borrar-producto2 fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
                 </td>
             `;
             listaCompra.appendChild(row);
@@ -196,7 +197,6 @@ class Carrito {
                 productosLS.splice(index, 1);
             }
         });
-
         //Añadimos el arreglo actual al LS
         localStorage.setItem('productos', JSON.stringify(productosLS));
     }
@@ -233,9 +233,7 @@ class Carrito {
                 location.href = "./compra.html";
             } else if (rutaActual.includes(rutaInformacion)) {
                 location.href = "./compra.html";
-            }
-         
-
+            } 
         }
     }
 
@@ -249,12 +247,12 @@ class Carrito {
             total = total + element;
         }
         
-        igv = parseFloat(total * 0.18).toFixed(2);
+        igv = parseFloat(total * 0.04).toFixed(2);
         subtotal = parseFloat(total-igv).toFixed(2);
 
-        document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
-        document.getElementById('igv').innerHTML = "S/. " + igv;
-        document.getElementById('total').value = "S/. " + total.toFixed(2);
+        document.getElementById('subtotal').innerHTML = subtotal + "€";
+        document.getElementById('igv').innerHTML = igv + "€";
+        document.getElementById('total').value = total.toFixed(2) + "€";
     }
 
     obtenerEvento(e) {
