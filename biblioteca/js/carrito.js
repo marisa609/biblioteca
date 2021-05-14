@@ -170,7 +170,7 @@ class Carrito {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>
-                    <img src="${producto.imagen}" width=100>
+                    <img src="${producto.imagen}" width=150>
                 </td>
                 <td>${producto.titulo}</td>
                 <td>${producto.precio}</td>
@@ -226,14 +226,20 @@ class Carrito {
             var rutaIndex = 'index';
             var rutaFicha = 'ficha';
             var rutaInformacion = 'informacion';
+            var rutaBusqueda = 'busqueda';
+            var rutaCoctacto = 'contacto';
             //Depende de si la ruta contiene una palabra u otra utilizamos la llamada adecuada
             if (rutaActual.includes(rutaIndex)) {
                 location.href = "./paginas/compra.html";
             } else if (rutaActual.includes(rutaFicha)) {
                 location.href = "./compra.html";
+            } else if (rutaActual.includes(rutaBusqueda)) {
+                location.href = "./compra.html";
             } else if (rutaActual.includes(rutaInformacion)) {
                 location.href = "./compra.html";
-            } 
+            } else if (rutaActual.includes(rutaCoctacto)) {
+                location.href = "./compra.html";
+            }
         }
     }
 

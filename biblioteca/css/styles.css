@@ -42,7 +42,7 @@
 .carrusel>div {
     float: left;
     height: 203px;
-    margin-right: 40px; /*aquí*/
+    margin-right: 55px; /*aquí*/
     width: 300px;
     text-align:center;
 }

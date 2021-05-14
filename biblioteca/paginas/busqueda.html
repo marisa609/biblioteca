@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">-->   	  
+	  <style type="text/css" media="screen">
+				@import '../css/cssIndex.css';
+	  </style>
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+
+
+	  <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+	  <script src="../js/popper.min.js"></script>
+    <script defer src="../js/botonScroll.js"></script>
+    <script defer src="../js/jquery-3.4.1.min.js"></script>
+    <script defer src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/carrito.js"></script>
+    <script defer src="../js/pedido.js"></script>
+  </head>
+  <body>
+    <div class="grid-container1">
+		<div class="itemIdioma">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light border">
+				<a class="navbar-brand text-dark" href="../index.html">LIBRERÍA ALMERÍA</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item dropdown">
+							<img src="../img/iconocarrito.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+								width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" style="float: left;"></img>
+							<div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+								<table id="lista-carrito" class="table">
+									<thead>
+										<tr>
+											<th>Imagen</th>
+											<th>Nombre</th>
+											<th>Precio</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+								<a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+								<a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+									Compra</a>
+							</div>
+						</li>
+					  </ul>
+					  <a id="baderaespana" href="#"><img src="../img/banderaespana.png" width="40px" style=" float: right;"></a>
+					  <a id="banderaenglaterra" href="#"><img src="../img/banderaenglaterra.png" width="40px" style="float: right;"></a>
+					  <a id="iconocuenta" href="#"><img src="../img/iconocuenta.png" width="25px" style="float: right;"></a>  
+				</div>
+			</nav>
+		</div>
+	  <div class="itemCabecera"> 
+		<center>
+			<img src="../img/logoLibreria.svg" width="20%">
+			<br>
+		  </center>
+		  <br><br>
+		  <nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">Menú</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="./informacion.html">Nosotros</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="./ficha.html">Ficha</a>
+				  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+                  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorías</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+					  <a class="dropdown-item" href="#">Historia</a>
+					  <a class="dropdown-item" href="#">Arte</a>
+					  <a class="dropdown-item" href="#">Comics</a>
+					  <a class="dropdown-item" href="#">Filosofía</a>
+					  <a class="dropdown-item" href="#">Cuentos</a>
+					  <a class="dropdown-item" href="#">Novela</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Otras</a>
+					</div>
+				  </li>
+				</ul>
+				<form class="d-flex ml-auto">
+				  <input class="form-control me-2" type="search" placeholder="Título, autor, ISBN..." aria-label="Search">
+				  <input id="buscar" type="button" onclick="javascript:cambia_de_pagina();" value="Buscar"/>
+				</form>
+			  </div>
+			</div>
+		  </nav>
+      </div>
+      <div class="itemProvincia">
+		<div class="" id="lista-productos"> 
+            <h1>Resultados de búsqueda</h1><br><br><br>
+                    <div id="carrito" class="form-group table-responsive" >
+                        <table class="table" id="" >
+                            <thead>
+                                <tr>
+                                    <!-- <th scope="col">Imagen</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Precio Unitario</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Eliminar</th> -->
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td>
+                                        <img src="../img/pequeno/libro1.gif" width=200>
+                                    </td>
+                                    <td colspan="4">
+                                        <H3 style="text-align: left;">COLMILLOS</H3><br>
+                                        <p style="text-align: left;"> 
+                                            Vicent es un adolescente de clase alta muy acostumbrado a hacer lo que le viene en gana. Su padre siente que ha perdido todo control sobre él y toma una medida radical: enviarlo a unos campamentos exclusivos, famosos entre la élite por su éxito en reeducación de jóvenes conflictivos. Pronto Vicent comprueba sus métodos, cuando le hacen pasar horas encerrado en un cuartito donde apenas cabe y no puede moverse. Poco a poco se irá adaptando a un mundo malsano de disciplina cruel y extrema.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <br><br><br><br>
+                                        <h4 class=""><span class="precio"></span>25.00</span>€</h4>
+                                        <div class="">
+                                            <div class="">
+                                            <div style="display: none"><a id="libro1" href="#" data-id="1"><img src="../img/pequeno/libro1.gif" class="" man-width="75%"></a></div>
+                                            <a id="libro1" href="#" data-id="1" style="display: none"><p id="titulo">COLMILLOS</p></a>
+                                            <h4 class="" style="display: none"><span class="precio">29.99</span>€</h4><br>
+                                            <a href="" class="btn  btn-success agregar-carrito" data-id="1">Comprar</a>
+                                        </div>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../img/pequeno/libro2.gif" width=200>
+                                    </td>
+                                    <td colspan="4">
+                                        <H3 style="text-align: left;">UNA VIDA DE PUEBLO</H3><br>
+                                        <p style="text-align: left;"> 
+                                            El pausado transcurrir de los días, con sus ritmos que parecen abolir el tiempo. La peculiar geometría de las calles que irradian desde la plaza central. El ciclo del cultivo y la cosecha, donde la muerte es simultáneamente cósmica y minúscula, donde el renacimiento es tan certero como el sol. El tempo de una existencia desplegada entre colinas, dolorosamente lejos del mar. Louise Glück condensa en Una vida de pueblo el día a día rural en Estados Unidos, con sus animales y habitantes, cuya juventud exuberante y subsecuente decadencia parecen hacer eco de la naturaleza que los rodea. Con ojo sutil e irónico, con dicción afilada, nos muestra el lado oculto de este devenir aparentemente sencillo, exhibiendo sin tremendismo las pasiones que transcurren hondas en su interior. 
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <br><br><br><br>
+                                        <h4 class=""><span class="precio"></span>30.99</span>€</h4>
+                                        <div class="">
+                                            <div class="">
+                                            <div style="display: none"><a id="libro2" href="#" data-id="2"><img src="../img/pequeno/libro2.gif" class="" man-width="75%"></a></div>
+                                            <a id="libro1" href="#" data-id="2" style="display: none"><p id="titulo">UNA VIDA DE PUEBLO</p></a>
+                                            <h4 class="" style="display: none"><span class="precio">19.90</span>€</h4><br>
+                                            <a href="" class="btn  btn-success agregar-carrito" data-id="2">Comprar</a>
+                                        </div>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../img/pequeno/libro3.gif" width=200>
+                                    </td>
+                                    <td colspan="4">
+                                        <H3 style="text-align: left;">EXHALACIÓN</H3><br>
+                                        <p style="text-align: left;"> 
+                                            ¿Qué pasaría si un inocente juguete dinamitara nuestra noción de libre albedrío? ¿Y si fuera posible ponerse en contacto con versiones de nosotros mismos en otras líneas temporales? No importa cuál sea el tema que trate Ted Chiang en sus narraciones, siempre demuestra una formidable habilidad para indagar en los enigmas de la condición humana y abordar los conflictos éticos que la relación con la tecnología plantea en nuestra existencia, desde una perspectiva abiertamente positiva y vitalista. Reveladores, elegantes y sorprendentes, los relatos de Exhalación sitúan a Ted Chiang entre los autores indiscutibles de la literatura estadounidense actual.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <br><br><br><br>
+                                        <h4 class=""><span class="precio"></span>34.90</span>€</h4>
+                                        <div class="">
+                                            <div class="">
+                                            <div style="display: none"><a id="libro1" href="#" data-id="3"><img src="../img/pequeno/libro3.gif" class="" man-width="75%"></a></div>
+                                            <a id="libro1" href="#" data-id="3" style="display: none"><p id="titulo">EXHALACIÓN</p></a>
+                                            <h4 class="" style="display: none"><span class="precio">29.90</span>€</h4><br>
+                                            <a href="" class="btn  btn-success agregar-carrito" data-id="3">Comprar</a>
+                                        </div>
+                                    </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+     		</div>
+		</div>
+    </div>
+	  <div class="itemBlanco"> 
+	  </div>
+	  <div class="itemBlanco2"> 
+	  </div>
+      <div class="itemFooter">
+			<div class="flex-container2">
+				<div class="flex-item-left2">
+					<h3>Contacto</h3>
+					<p>950 52 51 53</p>
+					<p>email@gmail.com</p>
+				</div>
+				<div class="flex-item-right2">
+					<h3>Localización</h3>
+					<p>C/ Nueva Almería 22</p>
+					<p>04007</p>
+				</div>
+			</div>
+      </div>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

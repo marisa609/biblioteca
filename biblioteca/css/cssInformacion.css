@@ -97,9 +97,9 @@
 	      text-decoration: underline;
 	      color: #cf4104;
 	    } 
-	    a:visited { /*Marca las visitas*/
+	    /* a:visited { Marca las visitas
 	      color: green;
-	    }
+	    } */
 	    a:active { /*Cambia de color al hacer click*/
 	      color: green;
 	    }
@@ -188,6 +188,53 @@
 			animation-duration: 3s;
 			animation-name: slidein;
 			animation-direction: alternate;
+		}
+
+		#buscar {
+			margin-left: 10px;
+			background-color: #555555;
+			border: none;
+			color: white;
+			padding: 3px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 12px;
+		}
+
+		.header {
+			color: #ff9736;
+			font-size: 27px;
+			padding: 10px;
+		}
+		
+		.bigicon {
+			font-size: 35px;
+			color: #ff9736;
+		}
+
+		.botonSalir {
+			padding: 10px;
+			background-color: red;
+			color: white;
+		}
+		.col-sm-10 small {
+			visibility: hidden;
+			position: absolute; 
+		}
+		
+		.col-sm-10.error small {
+			color: #e74c3c;
+			visibility: visible;
+		}
+
+		.col-sm-10.success input  {
+			border-color: #2ecc71;
+		}
+
+		.col-sm-10.error input  {
+			color: #e74c3c;    
 		}
 
 

@@ -23,6 +23,11 @@
     <script defer src="../js/bootstrap.min.js"></script>
     <script defer src="../js/carrito.js"></script>
     <script defer src="../js/pedido.js"></script>
+	<script>
+		function cambia_de_pagina(){
+            location.href="./busqueda.html"
+        }
+	</script>
   </head>
   <body>
     <div class="grid-container1">
@@ -83,6 +88,9 @@
 				  <li class="nav-item">
 					<a class="nav-link" aria-current="page" href="./ficha.html">Ficha</a>
 				  </li>
+				  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+                  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorías</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -99,7 +107,7 @@
 				</ul>
 				<form class="d-flex ml-auto">
 				  <input class="form-control me-2" type="search" placeholder="Título, autor, ISBN..." aria-label="Search">
-				  <button class="btn btn-outline-dark" type="submit">Search</button>
+				  <input id="buscar" type="button" onclick="javascript:cambia_de_pagina();" value="Buscar"/>
 				</form>
 			  </div>
 			</div>
@@ -196,7 +204,6 @@
 					<h3>Contacto</h3>
 					<p>950 52 51 53</p>
 					<p>email@gmail.com</p>
-					<h3><a href="./informacion.html">Sobre nosotros</a></h3>
 				</div>
 				<div class="flex-item-right2">
 					<h3>Localización</h3>

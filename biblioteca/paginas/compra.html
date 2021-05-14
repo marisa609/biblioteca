@@ -11,9 +11,21 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script defer src="../js/jquery-3.4.1.min.js"></script>
+        <script defer src="../js/bootstrap.min.js"></script>
+        <script defer src="../js/sweetalert2.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <script defer src="../js/carrito.js"></script>
+        <script defer src="../js/compra.js"></script>
         <style type="text/css" media="screen">
             @import '../css/cssIndex.css';
         </style> 
+        <script>
+            function cambia_de_pagina(){
+                    location.href="./busqueda.html"
+            }
+        </script>
     
     </head>
 
@@ -53,6 +65,9 @@
                         <li class="nav-item">
                           <a class="nav-link" aria-current="page" href="./ficha.html">Ficha</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+                          </li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorías</a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -69,7 +84,7 @@
                       </ul>
                       <form class="d-flex ml-auto">
                         <input class="form-control me-2" type="search" placeholder="Título, autor, ISBN..." aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <input id="buscar" type="button" onclick="javascript:cambia_de_pagina();" value="Buscar"/>
                       </form>
                     </div>
                   </div>
@@ -154,12 +169,24 @@
         </div>
     </main>
     </div>
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/sweetalert2.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script src="../js/carrito.js"></script>
-    <script src="../js/compra.js"></script>
+    <br><br>
+    <div class="itemFooter">
+        <div id="button-up">
+           <i class="fas fa-chevron-up"></i>
+        </div>
+           <div class="flex-container2">
+               <div class="flex-item-left2">
+                   <h3>Contacto</h3>
+                   <p>950 52 51 53</p>
+                   <p>email@gmail.com</p>
+               </div>
+               <div class="flex-item-right2">
+                   <h3>Localización</h3>
+                   <p>C/ Nueva Almería 22</p>
+                   <p>04007</p>
+               </div>
+           </div>
+       </div>
+   </div>  
 </body>
 </html>

@@ -16,9 +16,9 @@
 	        'blanco  pestanas pestanas pestanas blanco2'
 	        'blanco  sipnosis sipnosis sipnosis  blanco2'
 	        'blanco banner banner banner  blanco2';
-	      width: 97%;
-	      margin-left: auto; 
-	      margin-right: auto;
+	      /* width: 97%; */
+	      /* margin-left: auto; 
+	      margin-right: auto; */
 	      grid-gap: 0px;
 	      padding: 10px;
 	    }
@@ -31,16 +31,16 @@
 	    }
 
 	    div.itemIdioma {
-	      background-color: white;
-	      height: 5px;
-	      color: black;
-	      padding-left: 10px;
-	      padding-right: 10px;
-	      padding-top: 3px;
-	      padding-bottom: 27px;
-	      border-color: #aaaaaa;
-	      border-width: 1px;
-	      border-style: solid;
+			background-color: white;
+			height: 5px;
+			color: black;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 3px;
+			padding-bottom: 27px;
+			border-color: #aaaaaa;
+			border-width: 1px;
+			border-style: solid;
 	    }
 
 	    #baderaespana {
@@ -48,12 +48,12 @@
 	    }
 	    
 		div.itemCabecera {
-		  background-color: #fb7716;
-		  color: white;
-	      width: 70%;
-	      min-height: 250px;
-	      margin-left: 15%;
-	      padding-top: 50px;
+			background-color: #fb7716;
+			color: white;
+			width: 70%;
+			min-height: 250px;
+			margin-left: 15%;
+			padding-top: 50px;
 		}
 	
 	    div.itemLibro {
@@ -111,9 +111,9 @@
 	      text-decoration: underline;
 	      color: #101261;
 	    } 
-	    a:visited { /*Marca las visitas*/
+	    /* a:visited { Marca las visitas
 	      color: green;
-	    }
+	    } */
 	    a:active { /*Cambia de color al hacer click*/
 	      color: green;
 	    }
@@ -211,4 +211,17 @@
 		#precio {
 			font-size: 30px;
 			font-weight: bold;
+		}
+
+		#buscar {
+			margin-left: 10px;
+			background-color: #555555;
+			border: none;
+			color: white;
+			padding: 3px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 12px;
 		}

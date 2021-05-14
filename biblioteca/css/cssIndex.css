@@ -278,4 +278,19 @@
 			border-color: rgba(0,0,0,0.1);
 		} 
 
+		#buscar {
+			margin-left: 10px;
+			background-color: #555555;
+			border: none;
+			color: white;
+			padding: 3px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 12px;
+		}
+
+
+
 
