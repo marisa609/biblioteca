@@ -10,18 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-
 	  <script src="../js/popper.min.js"></script>
     <script defer src="../js/botonScroll.js"></script>
     <script defer src="../js/jquery-3.4.1.min.js"></script>
     <script defer src="../js/bootstrap.min.js"></script>
     <script defer src="../js/carrito.js"></script>
     <script defer src="../js/pedido.js"></script>
-    <script>
-      function cambia_de_pagina(){
-              location.href="./busqueda.html"
-          }
-    </script>
   </head>
   <body>
     <div class="grid-container1">
@@ -114,15 +108,16 @@
         			<img src="../img/libreria.jpg" style="width: 100%">
           </div>
       </div>
+      <strong id="warning" hidden>IntersectionObserver is not supported by your browser, so you can't see the effect. Check its browser support <a href="https://caniuse.com/#feat=intersectionobserver" target="_blank">here</a>.</strong>
       <div class="" id="lista-productos"></div>
       <div class="itemDescripcion">
           <h1>Conócenos</h1><br><br><br>
           <div class="flex-container">
               <div class="flex-item-left">
-                  <p id="movimiento">Nuestra librería es una de más destacables de la provincia de Almería, por lo que hemos recibido el premio a la mejor librería de la provincia en el 2019.</p>
-                  <p id="movimiento">Queremos que los más pequeños comiencen a leer en edad tempranas para que no se pierdan en el mundo tecnológico en el que les ha tocado nacer. Para ello, tenemos distintos programas en los que padres, madres e hijos/as acuden a nuestra librería el tercer sábado de cada mes para leer en familia los cuentos más enigmáticos.</p>
-                  <p id="movimiento">Además, estamos comprometidos en apoyar a los escritores y escritoras de nuestra provincia, por lo que siempre tenemos a disposición de los lectores una sección especial para ellos en nuestra librería. También, tenemos un programa especial que trabajamos conjuntamente con editoriales almerienses para ayudar a nuestros escritores locales a publicar sus fantásticos libros.</p>
-                  <p id="movimiento">Si quieres conocernos un poco más, no dudes en pasarte por nuestra librería. ¡Estaremos encantados/as de atenderte!</p>
+                  <p id="movimiento1">Nuestra librería es una de más destacables de la provincia de Almería, por lo que hemos recibido el premio a la mejor librería de la provincia en el 2019.</p>
+                  <p id="movimiento1">Queremos que los más pequeños comiencen a leer en edad tempranas para que no se pierdan en el mundo tecnológico en el que les ha tocado nacer. Para ello, tenemos distintos programas en los que padres, madres e hijos/as acuden a nuestra librería el tercer sábado de cada mes para leer en familia los cuentos más enigmáticos.</p>
+                  <p id="movimiento1">Además, estamos comprometidos en apoyar a los escritores y escritoras de nuestra provincia, por lo que siempre tenemos a disposición de los lectores una sección especial para ellos en nuestra librería. También, tenemos un programa especial que trabajamos conjuntamente con editoriales almerienses para ayudar a nuestros escritores locales a publicar sus fantásticos libros.</p>
+                  <p id="movimiento1">Si quieres conocernos un poco más, no dudes en pasarte por nuestra librería. ¡Estaremos encantados/as de atenderte!</p>
               </div>
           </div>
       </div>
@@ -137,7 +132,6 @@
   			</div>
       </div>
 	  </div>
-<!--     <div class="" id="lista-productos"></div> -->
       <div class="itemFooter">
 			<div class="flex-container2">
 				<div class="flex-item-left2">
@@ -154,5 +148,21 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</body>
+    <script>
+      function cambia_de_pagina(){
+              location.href="./busqueda.html"
+          }
+      var observer = new IntersectionObserver(function(entries) {
+        if(entries[0].isIntersecting === true)
+         //OPERACIONES A REALIZAR CUANDO EL ELEMENTO ES VISIBLE.
+                // Oculta los párrafos inmediatamente
+                $('p').hide();
+                // Ahora los muestra despacito, en 1 segundos (1000 milisegundos)
+                $('p').show(2000);
+      //SI QUERÉIS QUE SOLO SE REALICE LA PRIMERA VEZ QUE SE HACE VISIBLE PODEIS CONTOROLARLO MANUALMENTE CON UNA VARIABLE GLOBAL.
+      }, { threshold: [1] }); //SI CAMBIAS EL 1 POR UN 0, LA OPERACIÓN SE REALIZARA TAMBIEN CUANDO EL OBJETO ES PARCIALMENTE VISIBLE
+      //Aquí se añadirían los elementos que queremos controlar cuando son visibles.
+      observer.observe(document.querySelector(".flex-container"));       
+    </script>
+  </body>
 </html>

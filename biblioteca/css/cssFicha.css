@@ -68,7 +68,7 @@
 	    }
 
 	    div.itemPestanas {
-	      background-color: #e84033;
+	      background-color: #ffffff;
 	      color: black;
 	      width: 70%;
 	      margin-left: 15%;
@@ -158,7 +158,7 @@
 			flex: 80%;
 		}
 		.flex-item-right1 {
-			background-color: #e84033;
+			background-color: #ecdad9;
 			padding: 10px;
 			padding-bottom: 20px;
 			padding-left: 30px;
@@ -225,3 +225,106 @@
 			font-size: 16px;
 			border-radius: 12px;
 		}
+
+		#perfil {
+			width:120px;
+			height:120px;
+			border-radius:160px;
+			border:2px solid #666;
+		}
+
+		/*Estrellas*/
+
+		#form {
+			width: 250px;
+			margin: 0 auto;
+			height: 50px;
+		  }
+  
+		  #form p {
+			text-align: center;
+		  }
+  
+		  #form label {
+			font-size: 20px;
+		  }
+  
+		  input[type="radio"] {
+			display: none;
+		  }
+  
+		  label {
+			color: grey;
+			font-size: 30px;
+		  }
+  
+		  .clasificacion {
+			direction: rtl;
+			unicode-bidi: bidi-override;
+		  }
+  
+		  label:hover, label:hover ~ label {
+			color: orange;
+		  }
+  
+		  input[type="radio"]:checked ~ label {
+			color: orange;
+		  }
+
+
+		  /*LIKE Y DISLIKE*/
+		  
+		  .like {
+			display: inline-block;
+			margin-bottom: 0;
+			font-weight: normal;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background: lightgreen;
+			border: 1px solid transparent;
+			white-space: nowrap;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.428571429;
+			border-radius: 4px; 
+		  }
+
+		  .dislike {
+			  display: inline-block;
+			  margin-bottom: 0;
+			  font-weight: normal;
+			  text-align: center;
+			  vertical-align: middle;
+			  cursor: pointer;
+			  background: rgb(238, 144, 144);
+			  border: 1px solid transparent;
+			  white-space: nowrap;
+			  padding: 6px 12px;
+			  font-size: 14px;
+			  line-height: 1.428571429;
+			  border-radius: 4px;
+		  }
+		  .qty1,
+		  .qty2 {
+			  border: none;
+			  width:20px;
+			  background: transparent;
+		  }
+
+		  #myTab {
+			color: blue;
+		  }
+
+		  a:link, a:visited, a:active {
+			text-decoration:none;
+		}
+
+
+
+
+
+		  
+
+
+		  

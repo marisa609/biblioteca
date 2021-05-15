@@ -3,15 +3,10 @@
   <head>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">-->   	  
 	  <style type="text/css" media="screen">
 				@import '../css/cssFicha.css';
 	  </style>
-	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-
-
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -23,10 +18,24 @@
     <script defer src="../js/bootstrap.min.js"></script>
     <script defer src="../js/carrito.js"></script>
     <script defer src="../js/pedido.js"></script>
+	
 	<script>
 		function cambia_de_pagina(){
             location.href="./busqueda.html"
         }
+
+		$(function () {
+			$(".like").click(function () {
+				var input = $(this).find('.qty1');
+				input.val(parseInt(input.val())+ 1);
+			});
+
+			$(".dislike").click(function () {
+				var input = $(this).find('.qty2');
+				input.val(input.val() - 1);
+			});
+		});
+
 	</script>
   </head>
   <body>
@@ -137,10 +146,7 @@
      		</div>
 		</div>
       <div class="itemPestanas">
-		 <!-- <a href="#">Sinopsis</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-         <a href="#">Opiniones</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-         <a href="#">Recomendados</a> -->
-		 <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+		 <ul class="nav nav-tabs" id="myTab" role="tablist">
 			<li class="nav-item" role="presentation">
 			  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Sinopsis</button>
 			</li>
@@ -178,19 +184,197 @@
 						  <p>Sonatina No 1 in C Major II Andante, Aaron Dunn</p>
 			</div>
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-				
-					
-						 OPINIONES
-		  
-						
+				<div id="opiniones" class="form-group table-responsive">
+					<table class="table" id="" >
+						<thead>
+							<tr>
+								<!-- <th scope="col">Imagen</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Precio Unitario</th>
+								<th scope="col">Cantidad</th>
+								<th scope="col">Precio</th>
+								<th scope="col">Eliminar</th> -->
+							</tr>
+						</thead>
+						<tbody >
+							<tr>
+								<td colspan="2">
+									<img id="perfil" src="../img/perfiles/persona1.jpg">
+									<br><br>
+									<H5 style="text-align: center;">Paul</H5>
+								</td>
+								<td colspan="3">
+									<H4 style="text-align: left;">Excelente</H4>
+									<form>
+										<p class="clasificacion">
+											<input id="radio1" type="radio" name="estrellas" value="5">
+											<label for="radio1">★</label>
+											<input id="radio2" type="radio" name="estrellas" value="4">
+											<label for="radio2">★</label>
+											<input id="radio3" type="radio" name="estrellas" value="3">
+											<label for="radio3">★</label>
+											<input id="radio4" type="radio" name="estrellas" value="2">
+											<label for="radio4">★</label>
+											<input id="radio5" type="radio" name="estrellas" value="1">
+											<label for="radio5">★</label>
+										</p>
+								  	</form>
+									<p style="text-align: left;"> 
+										Las novelas históricas de aventuras suelen tener un especial atractivo además de éxito (véase 'Los Pilares de la tierra' o 'La catedral del mar'), y ésta no es la excepción. Bien escrita y ambientada, combinando realidad con ficción, la trama resulta entretenida y mantiene el interés a lo largo de sus 700 páginas.
+										<br><br><strong>hace 2 meses</strong>								
+									</p>
+								</td>
+								<td colspan="3">
+									<br><br><br><br>
+									<a class="like"><i class="fas fa-thumbs-up"></i>  
+										<input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+									</a>
+									<a class="dislike"><i class="far fa-thumbs-down"></i> 
+										<input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img id="perfil" src="../img/perfiles/persona2.jpg">
+									<br><br>
+									<H5 style="text-align: center;">Marina</H5>
+								</td>
+								<td colspan="4">
+									<H4 style="text-align: left;">Mejorable</H4>
+									<form>
+										<p class="clasificacion">
+											<input id="radio11" type="radio" name="estrellas" value="5">
+											<label for="radio11">★</label>
+											<input id="radio22" type="radio" name="estrellas" value="4">
+											<label for="radio22">★</label>
+											<input id="radio33" type="radio" name="estrellas" value="3">
+											<label for="radio33">★</label>
+											<input id="radio44" type="radio" name="estrellas" value="2">
+											<label for="radio44">★</label>
+											<input id="radio55" type="radio" name="estrellas" value="1">
+											<label for="radio55">★</label>
+										</p>
+								  </form>
+									<p style="text-align: left;"> 
+										Muy mejorable novela histórica de Chufo, que no logra enganchar, atrapar y que le salva que no está mal escrita. Desde luego le daré la oportunidad con sus demás obras.									
+										<br><br><strong>hace 4 meses</strong>
+									</p>
+								</td>
+								<td>
+									<br><br><br><br>
+									<a class="like"><i class="fas fa-thumbs-up"></i>  
+										<input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+									</a>
+									<a class="dislike"><i class="far fa-thumbs-down"></i> 
+										<input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img id="perfil" src="../img/perfiles/persona3.jpg">
+									<br><br>
+									<H5 style="text-align: center;">Marta</H5>
+								</td>
+								<td colspan="4">
+									<H4 style="text-align: left;">Emocionante</H4>
+									<form>
+										<p class="clasificacion">
+											<input id="radio111" type="radio" name="estrellas" value="5">
+											<label for="radio111">★</label>
+											<input id="radio222" type="radio" name="estrellas" value="4">
+											<label for="radio222">★</label>
+											<input id="radio333" type="radio" name="estrellas" value="3">
+											<label for="radio333">★</label>
+											<input id="radio444" type="radio" name="estrellas" value="2">
+											<label for="radio444">★</label>
+											<input id="radio555" type="radio" name="estrellas" value="1">
+											<label for="radio555">★</label>
+										</p>
+								  </form>
+									<p style="text-align: left;"> 
+										Ha sido una lectura emocionante, aunque en muchas ocasiones se deleita con un vocabulario desconocido o antiguo y se hace dificil. Opino tambièn que tendria que haber profundiZado mas con los personajes. Pero en definitiva ha sido un Relato muy interesante y me ha gustado mucho poder descubrir un autor que me animara a probar mas adelante alguna novela mas suya									
+										<br><br><strong>hace 5 meses</strong>
+									</p>
+								</td>
+								<td>
+									<br><br><br><br>
+									<a class="like"><i class="fas fa-thumbs-up"></i>  
+										<input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+									</a>
+									<a class="dislike"><i class="far fa-thumbs-down"></i> 
+										<input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
 			</div>
 			<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-				
-				
-						 
-						  RECOMENDADOS
-		  
-		  
+					<h1>Recomendados para ti</h1><br><br><br>
+							<div id="carrito" class="form-group table-responsive" >
+								<table class="table" id="" >
+									<thead>
+										<tr>
+											<!-- <th scope="col">Imagen</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Precio Unitario</th>
+											<th scope="col">Cantidad</th>
+											<th scope="col">Precio</th>
+											<th scope="col">Eliminar</th> -->
+										</tr>
+									</thead>
+									<tbody >
+										<tr>
+											<td>
+												<img src="../img/pequeno/libro1.gif" width=150>
+											</td>
+											<td colspan="4">
+												<H3 style="text-align: left;">COLMILLOS</H3><br>
+												<p style="text-align: left;"> 
+													Vicent es un adolescente de clase alta muy acostumbrado a hacer lo que le viene en gana. Su padre siente que ha perdido todo control sobre él y toma una medida radical: enviarlo a unos campamentos exclusivos, famosos entre la élite por su éxito en reeducación de jóvenes conflictivos. Pronto Vicent comprueba sus métodos, cuando le hacen pasar horas encerrado en un cuartito donde apenas cabe y no puede moverse. Poco a poco se irá adaptando a un mundo malsano de disciplina cruel y extrema.
+												</p>
+											</td>
+											<td>
+												<br><br><br><br>
+												<a href="" class="btn  btn-success agregar-carrito" data-id="1">Ver</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="../img/pequeno/libro2.gif" width=150>
+											</td>
+											<td colspan="4">
+												<H3 style="text-align: left;">UNA VIDA DE PUEBLO</H3><br>
+												<p style="text-align: left;"> 
+													El pausado transcurrir de los días, con sus ritmos que parecen abolir el tiempo. La peculiar geometría de las calles que irradian desde la plaza central. El ciclo del cultivo y la cosecha, donde la muerte es simultáneamente cósmica y minúscula, donde el renacimiento es tan certero como el sol. El tempo de una existencia desplegada entre colinas, dolorosamente lejos del mar. Louise Glück condensa en Una vida de pueblo el día a día rural en Estados Unidos, con sus animales y habitantes, cuya juventud exuberante y subsecuente decadencia parecen hacer eco de la naturaleza que los rodea. Con ojo sutil e irónico, con dicción afilada, nos muestra el lado oculto de este devenir aparentemente sencillo, exhibiendo sin tremendismo las pasiones que transcurren hondas en su interior. 
+												</p>
+											</td>
+											<td>
+												<br><br><br><br>
+												<a href="" class="btn  btn-success" data-id="2">Ver</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="../img/pequeno/libro3.gif" width=150>
+											</td>
+											<td colspan="4">
+												<H3 style="text-align: left;">EXHALACIÓN</H3><br>
+												<p style="text-align: left;"> 
+													¿Qué pasaría si un inocente juguete dinamitara nuestra noción de libre albedrío? ¿Y si fuera posible ponerse en contacto con versiones de nosotros mismos en otras líneas temporales? No importa cuál sea el tema que trate Ted Chiang en sus narraciones, siempre demuestra una formidable habilidad para indagar en los enigmas de la condición humana y abordar los conflictos éticos que la relación con la tecnología plantea en nuestra existencia, desde una perspectiva abiertamente positiva y vitalista. Reveladores, elegantes y sorprendentes, los relatos de Exhalación sitúan a Ted Chiang entre los autores indiscutibles de la literatura estadounidense actual.
+												</p>
+											</td>
+											<td>
+												<br><br><br><br>
+												<a href="" class="btn  btn-success agregar-carrito" data-id="3">Ver</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 			</div>
 		</div>
 	  	</div>
@@ -213,7 +397,6 @@
 			</div>
       </div>
     </div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>	
 </body>
 </html>
